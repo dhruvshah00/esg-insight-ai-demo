@@ -1,0 +1,38 @@
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environment folders
+env/
+venv/
+.venv/
+
+# Ignore Docker-related files
+*.log
+docker-compose.override.yml
+docker-compose.debug.yml
+
+# Ignore node_modules for the frontend
+frontend/node_modules/
+
+# Ignore build files for the frontend
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+
+# Ignore environment variables
+backend/.env
+frontend/.env
+
+# Ignore backup and temporary files
+*.bak
+*.swp
+*~
+
+# Ignore .vscode settings folder
+.vscode/
+
+# Ignore everything under backend/data/company_docs
+backend/data/company_docs/**
