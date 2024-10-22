@@ -6,7 +6,7 @@
 
 ESG Insights AI is a platform designed to automate and streamline the analysis of Environmental, Social, and Governance (ESG) data for companies. Using advanced AI models such as Llama Index workflows and built with Next.js, the platform ensures that ESG evaluations comply with Global Reporting Initiative (GRI) standards. It helps asset managers efficiently analyze ESG risks, improve reporting accuracy, and make better-informed investment decisions while reducing manual effort.
 
-### Key Features
+## Key Features
 
 - **AI Categorization & Prioritization**: Automatically ranks ESG topics, with analyst feedback for refinement.
 - **Automated Summaries**: Generates GRI-compliant ESG summaries for easier interpretation.
@@ -50,6 +50,7 @@ TAVILY_API_KEY=
 # Optional
 PHOENIX_CLIENT_HEADERS=
 PHOENIX_COLLECTOR_ENDPOINT=
+```
 
 
 ## Getting Started
