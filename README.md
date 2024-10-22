@@ -8,14 +8,15 @@ ESG Insights AI is a platform designed to automate and streamline the analysis o
 
 ### Key Features
 
-- **AI-Driven Categorization**: Automates categorizing and prioritizing ESG data, allowing for faster assessments.
-- **Automated Summaries**: Generates concise ESG summaries that comply with GRI standards, simplifying data interpretation.
-- **Comprehensive Data Integration**: Collects data from various sources to provide a complete ESG profile.
-- **GRI Compliance**: Ensures alignment with GRI standards for regulatory compliance.
-- **Human-in-the-Loop Validation**: Allows human experts to review and validate AI-generated reports for enhanced accuracy.
-- **Source Citation**: Each data point is linked back to its original source for full transparency.
-- **Performance Monitoring**: Uses Arize Phoenix for real-time monitoring of AI model performance.
-- **NVIDIA NIM for Scalability**: Ensures smooth operation during periods of high demand with NVIDIA NIM.
+- **AI Categorization & Prioritization**: Automatically ranks ESG topics, with analyst feedback for refinement.
+- **Automated Summaries**: Generates GRI-compliant ESG summaries for easier interpretation.
+- **Comprehensive Data Integration**: Aggregates data from multiple sources for a full ESG profile.
+- **GRI Compliance Reporting**: Assesses ESG alignment with GRI standards and identifies improvement areas.
+- **Human Validation**: Experts review AI-generated reports for accuracy.
+- **Source Citation**: Links data points to original sources for transparency.
+- **LLM Monitoring**: Tracks language model performance in real time.
+- **NVIDIA NIM Services**: Optimizes performance during peak demand periods.
+
 
 ## Benefits
 
@@ -42,8 +43,11 @@ This project includes both backend and frontend services:
 For the backend service, you need to set the following environment variables in the `.env` file:
 
 ```bash
+# Required
 NVIDIA_API_KEY=
 TAVILY_API_KEY=
+
+# Optional
 PHOENIX_CLIENT_HEADERS=
 PHOENIX_COLLECTOR_ENDPOINT=
 
