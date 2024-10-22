@@ -80,10 +80,6 @@ PHOENIX_COLLECTOR_ENDPOINT=
 
     The backend service will be available at `http://localhost:8000` and the frontend at `http://localhost:3000`.
 
-## Contributing
-
-We welcome contributions! Please read our [CONTRIBUTING.md](./CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
