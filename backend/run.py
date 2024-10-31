@@ -51,7 +51,7 @@ async def query_endpoint(websocket: WebSocket):
         llm = OpenAI(model="gpt-4o")
         print("OpenAI")
     else:
-        llm = NVIDIA(model="meta/llama-3.2-70b-instruct",base_url=)
+        llm = NVIDIA(model="meta/llama-3.2-70b-instruct")
     
     embed_model = NVIDIAEmbedding(model="NV-Embed-QA", truncate="END")
 
