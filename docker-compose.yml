@@ -22,6 +22,8 @@ services:
       - "3000:3000"
     volumes:
       - ./frontend:/app
+    env_file:
+      - ./frontend/.env
     command: npm run dev
     networks:
       - app-network

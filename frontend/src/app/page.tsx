@@ -25,8 +25,10 @@ export default function Home() {
       files.forEach((file, index) => {
         formData.append('files', file);  
       });
+
+      const upload_url = process.env.NEXT_PUBLIC_FILE_UPLOAD_URL || 'http://localhost:8000/upload';
   
-      fetch('http://localhost:8000/upload', {
+      fetch(upload_url, {
         method: 'POST',
         body: formData,
       })
@@ -47,7 +49,8 @@ export default function Home() {
       setProgress(prev => [...prev, 'Error: No files selected']);
     }
 
-    const socket = new WebSocket('ws://localhost:8000/query');
+    const web_socket_url = process.env.NEXT_PUBLIC_WEBSOCKET_URL || 'ws://localhost:8000/query';
+    const socket = new WebSocket(web_socket_url);
 
     socket.onopen = () => {
       setLoading(true);
