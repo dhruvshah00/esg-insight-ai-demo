@@ -16,11 +16,11 @@ async def get_compressed_context(
         transformations=[SentenceSplitter()],
     )
 
-    retriever = index.as_retriever(similarity_top_k=25)
+    retriever = index.as_retriever(similarity_top_k=5)
 
     nodes = retriever.retrieve(query)
 
-    processor = SimilarityPostprocessor(similarity_cutoff=0.5)
+    processor = SimilarityPostprocessor(similarity_cutoff=0.8)
     filtered_nodes = processor.postprocess_nodes(nodes)
     # print(filtered_nodes)
     print(

@@ -48,7 +48,7 @@ async def generate_formatted_markdown_text(context: str, llm: LLM) -> str:
 
 async def consolidate_assesment(assesment_1: str,assesment_2: str,llm: LLM) -> str:
     prompt = PromptTemplate("""
-    Rewrite a final 200 word assesment summary using the below 2 assesments. 
+    Rewrite a final 150 word assesment summary using the below 2 assesments. 
     
     Assesment 1:
     -----------------------------------------------------------------------------
@@ -80,7 +80,7 @@ async def generate_response_from_context(query: str, context: str, llm: LLM) -> 
 --------------------------------
 {context}
 --------------------------------
-Using the above information, answer the following query or task: "{question}" in less than 200 words.
+Using the above information, answer the following query or task: "{question}" in less than 100 words.
 """
     )
     response = await llm.apredict(

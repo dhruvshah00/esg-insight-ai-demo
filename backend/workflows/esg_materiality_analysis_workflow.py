@@ -178,7 +178,7 @@ class ESGMaterialityAnalysisWorkflow(Workflow):
         gri_topics = ev.gri_topics
         
         gri_workflow = get_gri_workflow(llm=self.llm, embed_model=self.embed_model)
-        progress_message = f"Analyzing reporting requirememnts for the chosen GRI Topics..."
+        progress_message = f"Analyzing reporting requirements for the chosen GRI Topics..."
         ctx.write_event_to_stream(ProgressEvent(msg=progress_message))
         await ctx.set("num_gri_topics_to_collect", len(gri_topics))
         for gri_topic in gri_topics:

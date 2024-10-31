@@ -37,7 +37,7 @@ async def query_endpoint(websocket: WebSocket):
     load_dotenv()
 
     client_headers = os.getenv("PHOENIX_CLIENT_HEADERS")
-    if client_headers and os.getenv("PHOENIX_CLIENT_HEADERS").startswith("api_key="):
+    if client_headers and client_headers.startswith("api_key="):
         tracer_provider = register(
             project_name="esg-insight-ai-app", 
             verbose=False,
@@ -46,8 +46,13 @@ async def query_endpoint(websocket: WebSocket):
         LlamaIndexInstrumentor().instrument(tracer_provider=tracer_provider,skip_dep_check=True)
 
 
-    llm = OpenAI(model="gpt-4o")
-    # llm = NVIDIA(model="meta/llama-3.1-70b-instruct")
+    openai_key = os.getenv("OPENAI_API_KEY")
+    if openai_key and len(openai_key) > 1:
+        llm = OpenAI(model="gpt-4o")
+        print("OpenAI")
+    else:
+        llm = NVIDIA(model="meta/llama-3.2-70b-instruct",base_url=)
+    
     embed_model = NVIDIAEmbedding(model="NV-Embed-QA", truncate="END")
 
     Settings.llm = llm

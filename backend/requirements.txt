@@ -17,3 +17,4 @@ uvicorn[standard]
 python-multipart
 opentelemetry-exporter-otlp 
 openinference-instrumentation-llama-index>=1.3.0
+arize-phoenix
